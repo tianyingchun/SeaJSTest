@@ -73,7 +73,7 @@ define(function(require, exports, module) {
    * Export an interface method
    * @param  {jquery object} $elems all jq object that  you want to trigger dropdown menu list.
    * @param  {object} options An object that can hold configuration
-   *                           eg.{listSelector:['#ddbuttonList1','#ddbuttoList2'],directions:['left','right'],topNav:'#topNav'}
+   *         eg.{listSelector:['#ddbuttonList1','#ddbuttoList2'],directions:directions:[{offset:0,direction:'right'},{offset:20,direction:'left'}],topNav:'#topNav'}
    * @return {void} 
    */
   exports.dropdownButton=function($elems,options){
@@ -86,7 +86,8 @@ define(function(require, exports, module) {
                _offset=directions[index].offset;
            } 
            if ($thisList.length) {
-              new DropdownButton($thisBtn, { list: $thisList, topNav: $topNav,direction:_direction,offset:_offset}).init();
+              var newOpts=$.extend({},options,{ list: $thisList, topNav: $topNav,direction:_direction,offset:_offset});
+              new DropdownButton($thisBtn,newOpts).init();
            }
       });
   };
