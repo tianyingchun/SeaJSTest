@@ -1,0 +1,10 @@
+{
+    "version": "0.0.1",
+    "author": "Terence tian <lovely6rui@outlook.com>",
+    "root": "zmodles",
+    "spmConfig":{
+    	"build":{
+    		"to": "../sea-modules/{{root}}/{{name}}/{{version}}"
+    	}
+    }
+}

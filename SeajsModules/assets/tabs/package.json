@@ -1,0 +1,12 @@
+{
+  "name": "tabs",
+  "version": "1.0.0",
+  "parent":"../package.json",
+  "dependencies": {
+    "jquery": "sea-modules/gallery/jquery/1.8.2/jquery"
+  }, 
+  "output": {
+    "main.js": ".",
+    "main.css": "."
+  }
+}
