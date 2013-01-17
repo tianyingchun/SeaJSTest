@@ -71,9 +71,14 @@ define(function(require, exports, module) {
 
   /**
    * Export an interface method
-   * @param  {jquery object} $elems all jq object that  you want to trigger dropdown menu list.
+   * @param  {jquery object} $elems all jq object that  you want to trigger dropdown menu list.eg. $("#tnCommunity,#tnHelp");
    * @param  {object} options An object that can hold configuration
-   *         eg.{listSelector:['#ddbuttonList1','#ddbuttoList2'],directions:directions:[{offset:0,direction:'right'},{offset:20,direction:'left'}],topNav:'#topNav'}
+   *         eg.{ 
+    	            listSelector:  ['#tnCommunityList', '#tnHelpList'],
+  		            topNav: '#topNav',
+  	            	activeClass: 'tn-active',
+  	            	directions:[{offset:0,direction:'right'},{offset:20,direction:'left'}]
+              	};
    * @return {void} 
    */
   exports.dropdownButton=function($elems,options){
